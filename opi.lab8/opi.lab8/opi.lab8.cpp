@@ -1,5 +1,5 @@
-// opi.lab8.cpp: определяет точку входа для консольного приложения.
-//
+
+
 
 #include "stdafx.h"
 #include <conio.h>
@@ -9,12 +9,24 @@
 #include <iostream>
 #include <stdlib.h>
 
-int _tmain(int argc, _TCHAR* argv[])
+using namespace std;
+
+
+const int N = 1000;
+void Input(char*);
+void output(char*);
+void edit();
+
+char s[N];
+
+int main()
 {
 	Input("in.txt");
-	Output("in.txt");
-	Edit();
+	edit();
+	cout << "--------------\nInput file:\n--------------\n";
+	output("in.txt");
+	cout << "--------------\nOutput file:\n--------------\n";
+	output("out.txt");
 	system("pause");
-	return 0;
 }
 
